@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-family: 'Rubik', sans-serif;
+}
+
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  padding-top: 10px;
+  background-image: url('./images/pattern-bg.png');
+  background-size: cover;
+  background-position: 60%;
+}
+
+.header-container h1 {
+  color: white;
+  font-size: 1.6rem;
+  padding-bottom: 0;
+  font-weight: 500;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: 85%;
+  height: 60px;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+}
+
+.search-container input {
+  height: 100%;
+  width: 80%;
+  border: none;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+
+.search-container input:focus {
+  outline: none;
+}
+
+.search-container button {
+  border: none;
+  background-color: var(--very-dark-gray);
+  height: 100%;
+  width: 3.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.search-container button:hover {
+  cursor: pointer;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  background-color: white;
+  width: 85%;
+  height: auto;
+  position: absolute;
+  top: 165px;
+  border-radius: 1rem;
+  z-index: 99;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+.info-header {
+  color: var(--dark-gray);
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.info-data {
+  color: black;
+  font-size: 20px;
+  margin: 5px 0 0 0;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.map-container {
+  height: calc(100vh - 280px);
+  width: 100%;
+  z-index: 2;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 500px) {
+  .search-container {
+    width: 425px;
+  }
+
+  .info-container {
+    width: 425px;
+  }
+}
+
+@media (min-width: 900px) {
+  .header-container {
+    height: 225px;
+  }
+
+  .search-container {
+    width: 600px;
+  }
+
+  .info-container {
+    width: 75%;
+    flex-direction: row;
+    gap: 50px;
+    text-align: left;
+    padding: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info-container {
+    width: 1000px;
+  }
+}

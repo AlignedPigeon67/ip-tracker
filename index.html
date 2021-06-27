@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <title>IP Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header class="header-container">
+        <h1>IP Address Tracker</h1>
+        <form data-ip-submit-form class="search-container">
+          <input
+            data-ip-submit-input
+            type="text"
+            placeholder="IP address or domain"
+          />
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+              <path
+                fill="none"
+                stroke="#FFF"
+                stroke-width="3"
+                d="M2 1l6 6-6 6"
+              />
+            </svg>
+          </button>
+        </form>
+        <div class="info-container">
+          <span class="info-section">
+            <h3 class="info-header">IP ADDRESS</h3>
+            <p data-info-ip class="info-data">192.212.174.101</p>
+          </span>
+          <span class="info-section">
+            <h3 class="info-header">LOCATION</h3>
+            <p data-info-location class="info-data">Brooklyn, NY 10001</p>
+          </span>
+          <span class="info-section">
+            <h3 class="info-header">TIMEZONE</h3>
+            <p data-info-timezone class="info-data">UTC -05:00</p>
+          </span>
+          <span class="info-section">
+            <h3 class="info-header">ISP</h3>
+            <p data-info-isp class="info-data">SpaceX Starlink</p>
+          </span>
+        </div>
+      </header>
+      <div class="map-container" id="mapid"></div>
+    </main>
+  </body>
+</html>
