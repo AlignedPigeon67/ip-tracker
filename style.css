@@ -159,6 +159,10 @@ main {
     text-align: left;
     padding: 25px;
   }
+
+  .map-container {
+    height: calc(100vh - 225px);
+  }
 }
 
 @media (min-width: 1200px) {
